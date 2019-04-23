@@ -1,0 +1,6 @@
+E:\VisualStudioProjects\ElementalTasks\ElementalTask9\bin\Debug\ElementalTask9.exe.config
+E:\VisualStudioProjects\ElementalTasks\ElementalTask9\bin\Debug\ElementalTask9.exe
+E:\VisualStudioProjects\ElementalTasks\ElementalTask9\bin\Debug\ElementalTask9.pdb
+E:\VisualStudioProjects\ElementalTasks\ElementalTask9\obj\Debug\ElementalTask9.exe
+E:\VisualStudioProjects\ElementalTasks\ElementalTask9\obj\Debug\ElementalTask9.pdb
+E:\VisualStudioProjects\ElementalTasks\ElementalTask9\obj\Debug\ElementalTask9.csprojResolveAssemblyReference.cache

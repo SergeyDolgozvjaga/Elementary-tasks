@@ -1,0 +1,5 @@
+E:\VisualStudioProjects\ElementalTasks\ElementalTask5\bin\Debug\ElementalTask5.exe.config
+E:\VisualStudioProjects\ElementalTasks\ElementalTask5\bin\Debug\ElementalTask5.exe
+E:\VisualStudioProjects\ElementalTasks\ElementalTask5\bin\Debug\ElementalTask5.pdb
+E:\VisualStudioProjects\ElementalTasks\ElementalTask5\obj\Debug\ElementalTask5.exe
+E:\VisualStudioProjects\ElementalTasks\ElementalTask5\obj\Debug\ElementalTask5.pdb

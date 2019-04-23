@@ -1,0 +1,14 @@
+E:\VisualStudioProjects\ElementalTasks\ElementalTask3Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\VisualStudioProjects\ElementalTasks\ElementalTask3Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\VisualStudioProjects\ElementalTasks\ElementalTask3Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\VisualStudioProjects\ElementalTasks\ElementalTask3Test\bin\Debug\ElementalTask3Test.dll
+E:\VisualStudioProjects\ElementalTasks\ElementalTask3Test\bin\Debug\ElementalTask3Test.pdb
+E:\VisualStudioProjects\ElementalTasks\ElementalTask3Test\bin\Debug\ElementalTask3.exe
+E:\VisualStudioProjects\ElementalTasks\ElementalTask3Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+E:\VisualStudioProjects\ElementalTasks\ElementalTask3Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+E:\VisualStudioProjects\ElementalTasks\ElementalTask3Test\bin\Debug\ElementalTask3.pdb
+E:\VisualStudioProjects\ElementalTasks\ElementalTask3Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+E:\VisualStudioProjects\ElementalTasks\ElementalTask3Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+E:\VisualStudioProjects\ElementalTasks\ElementalTask3Test\obj\Debug\ElementalTask3Test.csprojResolveAssemblyReference.cache
+E:\VisualStudioProjects\ElementalTasks\ElementalTask3Test\obj\Debug\ElementalTask3Test.dll
+E:\VisualStudioProjects\ElementalTasks\ElementalTask3Test\obj\Debug\ElementalTask3Test.pdb

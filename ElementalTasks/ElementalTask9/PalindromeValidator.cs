@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ElementalTask9
 {
@@ -26,6 +22,13 @@ namespace ElementalTask9
                     return true;
                 }
             }
+            return false;
+        }
+
+        public static bool IsContinue(string answer)
+        {
+            if (answer.Equals("YES", StringComparison.OrdinalIgnoreCase)
+                  || answer.Equals("Y", StringComparison.OrdinalIgnoreCase)) return true;
             return false;
         }
     }

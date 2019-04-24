@@ -10,7 +10,6 @@ namespace ElementalTask1Test
         public void Width_Check_ValidTest()
         {
             int expectedWidth = 5;
-            int expectedHeigth = 6;
 
             ChessBoard board = new ChessBoard(5, 6);      
 
@@ -20,7 +19,6 @@ namespace ElementalTask1Test
         [TestMethod]
         public void Heigth_Check_ValidTest()
         {
-            int expectedWidth = 5;
             int expectedHeigth = 6;
 
             ChessBoard board = new ChessBoard(5, 6);

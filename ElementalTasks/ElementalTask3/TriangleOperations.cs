@@ -6,10 +6,9 @@ namespace ElementalTask3
 {
     public class TriangleOperations
     {
-
         public List<Triangle> GetTriangles()
         {
-            String answer = "";
+            string continueAsk = "";
             List<Triangle> triangles = new List<Triangle>();
             do
             {
@@ -17,8 +16,9 @@ namespace ElementalTask3
                 {
                     Console.WriteLine("Please, enter name and sides of triangle."
                             + " Format: <Name>,<1-st side>,<2-nd side>,<3-rd side>");
-
+                    Console.ForegroundColor = ConsoleColor.Green;
                     string textTriangle = Console.ReadLine();
+                    Console.ForegroundColor = ConsoleColor.White;
                     string[] partsOfTriangle = textTriangle.Split(',');
                     string name = partsOfTriangle[0];
                     double firstSide = Convert.ToDouble(partsOfTriangle[1]);
@@ -28,11 +28,8 @@ namespace ElementalTask3
                     if (TriangleValidator.IsValidSizeTriangle(firstSide, secondSide, thirdSide))
                     {
                         triangles.Add(new Triangle(name, firstSide, secondSide, thirdSide));
-                        Console.WriteLine("Do you want to add new one?");
-                        answer = Console.ReadLine();
-                    }
+                    }                 
                 }
-
                 catch (FormatException)
                 {
                     Console.WriteLine("Unfortunatelly, inserted number is in the invalid number format");
@@ -46,7 +43,12 @@ namespace ElementalTask3
                     Console.WriteLine("Unfortunatelly, inserted number is too long");                    
                 }
 
-            } while (TriangleValidator.IsContinue(answer));
+                PrintInfoContinueAddTriangles();
+                Console.ForegroundColor = ConsoleColor.Green;
+                continueAsk = Console.ReadLine();
+                Console.ForegroundColor = ConsoleColor.White;
+
+            } while (TriangleValidator.IsContinue(continueAsk));
             return triangles;
         }
 
@@ -59,15 +61,22 @@ namespace ElementalTask3
         public void PrintTriangles(List<Triangle> triangle)
         {
             List<Triangle> triangleList = triangle;
-
             int i = 1;
             foreach (Triangle triangles in triangleList)
             {
                 Console.WriteLine(
                         i + ". [Triangle " + triangles.Name 
-                        + "]: Square = "   + triangles.GetSquare().ToString("##.##") + " cm^2 ");
+                        + "]: Square = "   + triangles.GetSquare().ToString("##.##") + " cm ");
                 i++;
             }
+        }
+
+        private void PrintInfoContinueAddTriangles()
+        {
+            Console.WriteLine("Do you want to add new one?");
+            Console.WriteLine("Press 'y' or 'yes' to continue");
+            Console.WriteLine("or press any other key to stop");
+            Console.WriteLine("add triangles, and show all triangles");
         }
     }
 }

@@ -33,6 +33,19 @@ namespace ElementalTask7Test
         }
 
         [TestMethod]
+        public void ArgumentValidator_5001_2000000001_Invalid_Number_Test()
+        {
+            bool expected = false;
+            bool actual;
+
+            int number = 5001;
+            int square = 2000000001;
+            actual = NumericValidator.ArgumentValidator(number, square);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void ArgumentValidator_100_0_Invalid_Square_Test()
         {
             bool expected = false;
@@ -46,13 +59,13 @@ namespace ElementalTask7Test
         }
 
         [TestMethod]
-        public void ArgumentValidator_100_2147483648_Invalid_Square_Test()
+        public void ArgumentValidator_100_2000000001_Invalid_Square_Test()
         {
             bool expected = false;
             bool actual;
 
             int number = 100;
-            int square = 2147483647;
+            double square = 2000000001;
             actual = NumericValidator.ArgumentValidator(number, square);
 
             Assert.AreEqual(expected, actual);
@@ -65,7 +78,7 @@ namespace ElementalTask7Test
             bool actual;
 
             int number = 0;
-            int square = 0;
+            double square = 0;
             actual = NumericValidator.ArgumentValidator(number, square);
 
             Assert.AreEqual(expected, actual);
@@ -78,7 +91,7 @@ namespace ElementalTask7Test
             bool actual;
 
             int number = 10;
-            int square = 15;
+            double square = 15;
             actual = NumericValidator.ArgumentValidator(number, square);
 
             Assert.AreEqual(expected, actual);
@@ -91,7 +104,7 @@ namespace ElementalTask7Test
             bool actual;
 
             int number = 3;
-            int square = 6000;
+            double square = 6000;
             actual = NumericValidator.ArgumentValidator(number, square);
 
             Assert.AreEqual(expected, actual);
@@ -100,11 +113,11 @@ namespace ElementalTask7Test
         [TestMethod]
         [DataRow(3, 50)]
         [DataRow(1, 300)]
-        [DataRow(5, 7000)]
-        [DataRow(10, 50500)]
-        [DataRow(15, 888888)]
+        [DataRow(5, 7000.68)]
+        [DataRow(10, 50500.32)]
+        [DataRow(15, 888888.0)]
         [DataRow(325, 9999999)]
-        public void ArgumentValidator_Valid_Number_And_Square_Test(int number, int square)
+        public void ArgumentValidator_Valid_Number_And_Square_Test(int number, double square)
         {
             bool expected = true;
             bool actual;
@@ -121,7 +134,7 @@ namespace ElementalTask7Test
         [DataRow(-8, 300)]
         [DataRow(-699, 5000000)]
         [DataRow(-5, 8)]
-        public void ArgumentValidator_Invalid_Number_Test(int number, int square)
+        public void ArgumentValidator_Invalid_Number_Test(int number, double square)
         {
             bool expected = false;
             bool actual;
@@ -138,7 +151,7 @@ namespace ElementalTask7Test
         [DataRow(8, -300)]
         [DataRow(699, -5000000)]
         [DataRow(5, -8)]
-        public void ArgumentValidator_Invalid_Square_Test(int number, int square)
+        public void ArgumentValidator_Invalid_Square_Test(int number, double square)
         {
             bool expected = false;
             bool actual;
@@ -155,7 +168,7 @@ namespace ElementalTask7Test
         [DataRow(-8, -300000)]
         [DataRow(-699, 0)]
         [DataRow(0, -3)]
-        public void ArgumentValidator_Invalid_Number_And_Square_Test(int number, int square)
+        public void ArgumentValidator_Invalid_Number_And_Square_Test(int number, double square)
         {
             bool expected = false;
             bool actual;

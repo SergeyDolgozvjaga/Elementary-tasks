@@ -27,9 +27,9 @@ namespace ElementalTask3
 
         public double GetSquare()
         {
-            // полусумма обратных величин 
+            // half of perimeter
             double p = (firstSide + secondSide + thirdSide) / 2;
-            // площадь
+            // area of ​​a triangle
             return Math.Sqrt(p * (p - firstSide) * (p - secondSide) * (p - thirdSide));         
         }
     }

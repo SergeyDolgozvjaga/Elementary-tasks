@@ -3,3 +3,4 @@ E:\VisualStudioProjects\ElementalTasks\ElementalTask7\bin\Debug\ElementalTask7.e
 E:\VisualStudioProjects\ElementalTasks\ElementalTask7\bin\Debug\ElementalTask7.pdb
 E:\VisualStudioProjects\ElementalTasks\ElementalTask7\obj\Debug\ElementalTask7.exe
 E:\VisualStudioProjects\ElementalTasks\ElementalTask7\obj\Debug\ElementalTask7.pdb
+E:\VisualStudioProjects\ElementalTasks\ElementalTask7\obj\Debug\ElementalTask7.csprojResolveAssemblyReference.cache

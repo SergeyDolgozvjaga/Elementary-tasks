@@ -1,7 +1,7 @@
 ﻿
 namespace ElementalTask2
 {
-    class Envelope
+    public class Envelope
     {
         private double width;
         private double heigth;
@@ -11,7 +11,6 @@ namespace ElementalTask2
             this.width = width;
             this.heigth = heigth;
         }
-
 
         public double Width
         {

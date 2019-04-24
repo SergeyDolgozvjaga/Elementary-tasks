@@ -6,9 +6,11 @@ namespace ElementalTask3
     {
         public static bool IsValidSizeTriangle(double firstSide, double secondSide, double thirdSide)
         {
-            if (firstSide <= 0 || secondSide <= 0 || thirdSide <= 0)
+            if ((firstSide <= 0 || firstSide > 500000)
+                || (secondSide <= 0 || secondSide > 500000) 
+                || (thirdSide <= 0 || thirdSide > 500000))
             {
-                Console.WriteLine("Insert numbers should be more, than 0");
+                Console.WriteLine("Insert numbers should be more, than 0 and less, then 500000");
                 return false;
             }
             else if (((firstSide + secondSide) <= thirdSide) 

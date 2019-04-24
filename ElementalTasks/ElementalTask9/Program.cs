@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ElementalTask9
 {
@@ -10,23 +6,30 @@ namespace ElementalTask9
     {
         public static void Main()
         {
-            try
+            String continueAsk = "";
+            PrintInfo();
+            do
             {
-                PrintInfo();
-                Console.WriteLine("Please input a number...");
-                string userInput = Console.ReadLine();
-                string[] splitInput = userInput.Split(' ');
-                PalindromeCalculation palindromeCalc = new PalindromeCalculation();
-                PrintPalindrome(palindromeCalc.AddToDictionary(splitInput));              
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("Unfortunatelly, inserted number is in the invalid number format");
-            }
-            catch (OverflowException)
-            {
-                Console.WriteLine("Unfortunatelly, inserted number is too long");
-            }
+                try
+                {
+                    Console.WriteLine("Please input a number...");
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    string userInput = Console.ReadLine();
+                    Console.ForegroundColor = ConsoleColor.White;
+
+                    new PalindromeCalculation().AddToDictionaryPalindrome(userInput);
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Input value is incorrect");
+                }
+
+                PrintInfoContinue();
+                Console.ForegroundColor = ConsoleColor.Green;
+                continueAsk = Console.ReadLine();
+                Console.ForegroundColor = ConsoleColor.White;
+
+            } while (PalindromeValidator.IsContinue(continueAsk));
         }
 
         public static void PrintInfo()
@@ -34,15 +37,14 @@ namespace ElementalTask9
             Console.WriteLine("Welcome to our Palindrome application");
             Console.WriteLine("app check if input number or it's part");
             Console.WriteLine("is a palindrome");
-            Console.WriteLine("--------------------------------------");                 
+            Console.WriteLine("--------------------------------------");
         }
 
-        public static void PrintPalindrome(Dictionary<string, int> dictionary)
+        private static void PrintInfoContinue()
         {
-            foreach (KeyValuePair<string, int> entry in dictionary)
-            {
-                Console.WriteLine(entry.Key);
-            }
+            Console.WriteLine("Do you want to play one more time?");
+            Console.WriteLine("Press 'y' or 'yes' to continue");
+            Console.WriteLine("or press any other key to stop");
         }
     }
 }

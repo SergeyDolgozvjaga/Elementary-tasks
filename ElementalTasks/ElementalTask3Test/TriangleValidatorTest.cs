@@ -17,6 +17,16 @@ namespace ElementalTask3Test
         }
 
         [TestMethod]
+        public void TriagleSizes_3000000_70000_500001_InvalidTest()
+        {
+            bool expected = false;
+            bool actual;
+
+            actual = TriangleValidator.IsValidSizeTriangle(3000000, 70000, 500001);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void TriagleSizes_3_4_8_InvalidTest()
         {
             bool expected = false;
@@ -97,6 +107,19 @@ namespace ElementalTask3Test
         [DataRow(false, 7, 2, 4)]
         [DataRow(false, 0, 5, 9)]
         public void TriagleSizes_InvalidTest(bool expected, double firstSize, double secondSize, double trirdSize)
+        {
+            bool actual;
+
+            actual = TriangleValidator.IsValidSizeTriangle(firstSize, secondSize, trirdSize);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        [DataRow(false, 700000, 8, 0000)]
+        [DataRow(false, 50000, 600000, 900000)]
+        [DataRow(false, 7000, 2000000, 4000000)]
+        [DataRow(false, 0, 3453453, 9345345)]
+        public void TriagleSizes_InvalidTest2(bool expected, double firstSize, double secondSize, double trirdSize)
         {
             bool actual;
 

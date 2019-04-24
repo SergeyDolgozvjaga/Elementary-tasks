@@ -2,9 +2,9 @@
 
 namespace ElementalTask2
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             string answer = "";
             do
@@ -24,10 +24,10 @@ namespace ElementalTask2
                     double heigthSecond = Convert.ToDouble(Console.ReadLine());
                     Envelope envelope2 = new Envelope(widthSecond, heigthSecond);
 
-                    if (EnvelopeValidator.isValidEnvelop(widthFirst, heigthFirst)
-                    && EnvelopeValidator.isValidEnvelop(widthSecond, heigthSecond))
+                    if (EnvelopeValidator.IsValidEnvelop(envelope1)
+                    && EnvelopeValidator.IsValidEnvelop(envelope2))
                     {
-                        EnvelopeCalculation.envelopeCalculate(envelope1, envelope2);
+                        new EnvelopeCalculation().PrintEnvelopeInputResult(envelope1, envelope2);
                         Console.ReadKey();
                     }
                 }
@@ -36,12 +36,10 @@ namespace ElementalTask2
                     Console.WriteLine("Incorrect input!");
                     Console.ReadKey();
                 }
-                Console.WriteLine("Would you like to continue?");
-                Console.WriteLine("For continue press 'yes' or 'y'");
-                Console.WriteLine("Any other key will stop application");
+                EnvelopeCalculation.PrintIsContinue();
                 answer = Console.ReadLine();
                 
-            } while (EnvelopeValidator.isContinue(answer)); 
-        }
+            } while (EnvelopeValidator.IsContinue(answer)); 
+        }       
     }
 }
